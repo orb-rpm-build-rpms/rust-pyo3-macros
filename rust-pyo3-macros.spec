@@ -5,7 +5,7 @@
 %global crate pyo3-macros
 
 Name:           rust-%{crate}
-Version:        0.14.4
+Version:        0.14.5
 Release:        %autorelease
 Summary:        Proc macros for PyO3 package
 
