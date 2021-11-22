@@ -5,7 +5,7 @@
 %global crate pyo3-macros
 
 Name:           rust-%{crate}
-Version:        0.14.5
+Version:        0.15.1
 Release:        %autorelease
 Summary:        Proc macros for PyO3 package
 
@@ -49,6 +49,18 @@ This package contains library source intended for building other packages
 which use "default" feature of "%{crate}" crate.
 
 %files       -n %{name}+default-devel
+%ghost %{cargo_registry}/%{crate}-%{version_no_tilde}/Cargo.toml
+
+%package     -n %{name}+multiple-pymethods-devel
+Summary:        %{summary}
+BuildArch:      noarch
+
+%description -n %{name}+multiple-pymethods-devel %{_description}
+
+This package contains library source intended for building other packages
+which use "multiple-pymethods" feature of "%{crate}" crate.
+
+%files       -n %{name}+multiple-pymethods-devel
 %ghost %{cargo_registry}/%{crate}-%{version_no_tilde}/Cargo.toml
 
 %prep
