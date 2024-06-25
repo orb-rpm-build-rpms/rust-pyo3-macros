@@ -5,7 +5,7 @@
 %global crate pyo3-macros
 
 Name:           rust-pyo3-macros
-Version:        0.21.2
+Version:        0.22.0
 Release:        %autorelease
 Summary:        Proc macros for PyO3 package
 
@@ -58,16 +58,16 @@ use the "experimental-async" feature of the "%{crate}" crate.
 %files       -n %{name}+experimental-async-devel
 %ghost %{crate_instdir}/Cargo.toml
 
-%package     -n %{name}+experimental-declarative-modules-devel
+%package     -n %{name}+gil-refs-devel
 Summary:        %{summary}
 BuildArch:      noarch
 
-%description -n %{name}+experimental-declarative-modules-devel %{_description}
+%description -n %{name}+gil-refs-devel %{_description}
 
 This package contains library source intended for building other packages which
-use the "experimental-declarative-modules" feature of the "%{crate}" crate.
+use the "gil-refs" feature of the "%{crate}" crate.
 
-%files       -n %{name}+experimental-declarative-modules-devel
+%files       -n %{name}+gil-refs-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+multiple-pymethods-devel
